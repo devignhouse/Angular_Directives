@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-directives';
+  showSecret: boolean = false;
+
+  log = [];
+
+  checkSecret() {
+    this.showSecret = !this.showSecret;
+    this.log.push(new Date());
+    //this.log.push(this.log.length + 1);
+  }
 }
